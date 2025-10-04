@@ -28,25 +28,6 @@
 
   <div id="users" class="user-container"></div>
 
-  <script>
-    fetch("http://localhost:3001/users")   // json-server 실행 후
-      .then(res => res.json())
-      .then(data => {
-        let html = "";
-        data.forEach(user => {
-          html += `
-          <div class="card">
-            <h2>${user.name}</h2>
-            <p><strong>Email:</strong> ${user.email}</p>
-            <p><strong>Phone:</strong> ${user.phone}</p>
-            <p><strong>Address:</strong> ${user.address}</p>
-            <p><strong>Hobby:</strong> ${user.hobby}</p>
-          </div>
-        `;
-        });
-        document.getElementById("users").innerHTML = html;
-      });
-  </script>
 </body>
 
 </html>
